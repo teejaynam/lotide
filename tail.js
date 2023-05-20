@@ -3,6 +3,7 @@ const assertEqual = function(actual, expected) {
   console.log(outcome);
 };
 
+// function that returns the an array without the first element
 const tail = function(array) {
   let newArray = array.slice(1,array.length);
   console.log(newArray);

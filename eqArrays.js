@@ -3,6 +3,7 @@ const assertEqual = function(actual, expected) {
   console.log(outcome);
 };
 
+// function that compares two arrays for strict equality, if there is at least one inequal element, it will return false
 const eqArrays = function(actual, expected) {
   if (actual.length !== expected.length) {
     return false;

@@ -3,6 +3,7 @@ const assertEqual = function(actual, expected) {
   console.log(outcome);
 };
 
+// function for getting the first element of a given array
 const head = function(array) {
   return array[0];
 };

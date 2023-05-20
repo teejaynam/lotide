@@ -18,6 +18,7 @@ const assertArraysEqual = function(actual,expected) {
     : console.log(`🔴 Assertion Failed: ${actual} !== ${expected}`);
 };
 
+// function that returns a flattened version of a given array
 const flatten = function(source) {
   return source.flat();
 };

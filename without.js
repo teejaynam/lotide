@@ -18,6 +18,7 @@ const assertArraysEqual = function(actual,expected) {
     : console.log(`🔴 Assertion Failed: ${actual} !== ${expected}`);
 };
 
+// function that receives an array and an element to be removed from the source array and returns the filtered array without affecting the original given array
 const without = function(source, itemsToRemove) {
   let subset = [];
 

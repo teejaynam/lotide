@@ -18,6 +18,7 @@ const assertArraysEqual = function(actual,expected) {
     : console.log(`🔴 Assertion Failed: ${actual} !== ${expected}`);
 };
 
+// function that returns the middle element of a given array, returns an empty array if there are less than 3 elements, and 2 middle elements if there are an even amount of elements
 const middle = function(source) {
   let middleArray = [];
 

@@ -12,6 +12,7 @@ const eqArrays = function(actual, expected) {
   return true;
 };
 
+// side effect function that returns a pass if eqArrays is true or fail is returns false
 const assertArraysEqual = function(actual,expected) {
   eqArrays(actual, expected)
     ? console.log(`🟢 Assertion Passed: ${actual} === ${expected}`)
