@@ -14,7 +14,12 @@ const eqArrays = function(actual, expected) {
 
 const assertArraysEqual = function(actual,expected) {
   eqArrays(actual, expected)
-  ? console.log(`🟢 Assertion Passed: ${actual} === ${expected}`)
-  : console.log(`🔴 Assertion Failed: ${actual} !== ${expected}`);
+    ? console.log(`🟢 Assertion Passed: ${actual} === ${expected}`)
+    : console.log(`🔴 Assertion Failed: ${actual} !== ${expected}`);
 };
 
+const flatten = function(source) {
+  return source.flat();
+};
+
+flatten([1, 2, [3, 4], 5, [6]]); // => [1, 2, 3, 4, 5, 6]
