@@ -17,6 +17,9 @@ const eqArrays = function(actual, expected) {
   return true;
 };
 
+
+// testing
+
 if (eqArrays([1, 2, 3], [1, 2, 3])) {
   console.log("true");
 } else {
@@ -28,7 +31,6 @@ if (eqArrays([1, 2, 3], [1, 2, "3"])) {
 } else {
   console.log("false");
 } // => false
-
 
 
 assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS

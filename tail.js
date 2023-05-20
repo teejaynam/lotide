@@ -5,10 +5,16 @@ const assertEqual = function(actual, expected) {
 
 const tail = function(array) {
   let newArray = array.slice(1,array.length);
+  console.log(newArray);
   return newArray;
 };
 
-//tests
+// testing
 const words = ["Yo Yo", "Lighthouse", "Labs"];
-tail(words); // no need to capture the return value since we are not checking it
-assertEqual(words.length, 3); // original array should still have 3 elements!
+
+// testing that the original array is not affected by the tail function
+tail(words);
+assertEqual(words.length, 3);
+
+// will fail, cannot compare two arrays
+assertEqual(tail(words),["Lighthouse","Labs"]);

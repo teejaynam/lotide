@@ -33,6 +33,7 @@ const middle = function(source) {
   return middleArray;
 };
 
+// testing
 assertArraysEqual(middle([1,2]),[]);
 assertArraysEqual(middle([1,2,3,4,5]),[3,4]);
 assertArraysEqual(middle([1,2,3,4,5,6]),[3,4]);

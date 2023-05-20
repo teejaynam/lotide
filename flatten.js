@@ -22,4 +22,5 @@ const flatten = function(source) {
   return source.flat();
 };
 
-flatten([1, 2, [3, 4], 5, [6]]); // => [1, 2, 3, 4, 5, 6]
+// testing
+assertArraysEqual(flatten([1, 2, [3, 4], 5, [6]]),[1,2,3,4,5,6]);
