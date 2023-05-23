@@ -39,3 +39,5 @@ if (eqArrays([1, 2, 3], [1, 2, "3"])) {
 
 
 assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
+assertEqual(eqArrays(['medium', 'L'], ['medium', 'L']), true); // => should PASS
+

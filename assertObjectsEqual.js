@@ -48,25 +48,18 @@ const eqObjects = function(object1, object2) {
   return true; // if key+value conditions all go through, they are equal, and return true
 };
 
-// tests
 
-const shirtObject = { color: "red", size: "medium" };
-const anotherShirtObject = { size: "medium", color: "red" };
-assertEqual(eqObjects(shirtObject , anotherShirtObject), true);
+const assertObjectsEqual = function(actual, expected) {
+  const inspect = require('util').inspect;
+  eqObjects(actual, expected)
+    ? console.log(`🟢 Assertion Passed: ${inspect(actual)} === ${inspect(expected)}`)
+    : console.log(`🔴 Assertion Failed: ${inspect(actual)} !== ${inspect(expected)}`);
+};
 
-const longSleeveShirtObject = { size: "medium", color: "red", sleeveLength: "long" };
-const test4 = { size: "medium", color: "blue", sleeveLength: "long" };
-
-const test5 = { color: "blue", sleeveLength: "long", size: "medium" };
-
-assertEqual(eqObjects(shirtObject , longSleeveShirtObject), false);
-assertEqual(eqObjects(longSleeveShirtObject , test4), false);
-assertEqual(eqObjects(test4,test5), true);
-
-
+// testing
 const test6 = { size: ["medium","L"], color: "blue", sleeveLength: "long" };
 const test7 = { color: "blue", sleeveLength: "long", size: ["medium","L"] };
-assertEqual(eqObjects(test6,test7), true);
-
-
-
+assertObjectsEqual(test6,test7); //PASS CASE
+const test4 = { size: "medium", color: "blue", sleeveLength: "long" };
+const test5 = { color: "red", sleeveLength: "long", size: "medium" };
+assertObjectsEqual(test4,test5); //FAIL CASE
