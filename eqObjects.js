@@ -40,7 +40,7 @@ const eqObjects = function(object1, object2) {
       if (!eqArrays(object1[key],object2[key])) {
         return false;
       }
-    } else if (object1[key] !== object2[key]) { //if they werent both arrays, we compare the values of the object at that key
+    } else if (object1[key] !== object2[key]) { //if they werent both arrays, we check for shallow equality of the values of the object at that key
       return false;
     }
   }
