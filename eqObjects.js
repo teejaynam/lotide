@@ -39,7 +39,7 @@ const eqObjects = function(object1, object2) {
     if (Array.isArray(object1[key]) && Array.isArray(object2[key])) { // if the key value of both objects are arrays, check if eqArrays is false for the given values
       if (!eqArrays(object1[key],object2[key])) {
         return false;
-      }
+      } // an array that passes the conditions here will fail at this shallow check so we put an else if
     } else if (object1[key] !== object2[key]) { //if they werent both arrays, we check for shallow equality of the values of the object at that key
       return false;
     }
