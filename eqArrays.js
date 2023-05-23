@@ -5,17 +5,21 @@ const assertEqual = function(actual, expected) {
 
 // function that compares two arrays for strict equality, if there is at least one inequal element, it will return false
 const eqArrays = function(actual, expected) {
-  if (actual.length !== expected.length) {
-    return false;
-  }
-
-  for (let i = 0; i < actual.length; i++) {
-    if (actual[i] !== expected[i]) {
+  if (Array.isArray(actual) && Array.isArray(expected)) {
+    if (actual.length !== expected.length) {
       return false;
     }
+
+    for (let i = 0; i < actual.length; i++) {
+      if (actual[i] !== expected[i]) {
+        return false;
+      }
+    }
+
+    return true;
   }
 
-  return true;
+  return false;
 };
 
 
