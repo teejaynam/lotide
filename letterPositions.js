@@ -44,4 +44,5 @@ const test = letterPositions('hello');
 assertArraysEqual(test['h'], [0]);
 assertArraysEqual(test['e'], [1]);
 assertArraysEqual(test['l'], [2, 3]);
-assertArraysEqual(test['o'], [4]);
+assertArraysEqual(test['o'], [4]); 
+assertArraysEqual(letterPositions("hello").l, [2,3]);
