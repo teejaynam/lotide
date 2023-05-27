@@ -5,8 +5,8 @@ const assertEqual = function(actual, expected) {
 };
 
 const findKey = function(object, callback) {
-  for (const key of Object.keys(object)) {
-    if (callback(object[key])) {
+  for (const key of Object.keys(object)) { //for..of loop to iterate through array of object's keys, 
+    if (callback(object[key])) { //invoke callback function of the object value at the key, if true, return key, if not, return undefined
       return key;
     }
   }
@@ -37,3 +37,5 @@ assertEqual(findKey({
   "Montreal":    { province: "Quebec" },
   "Vancouver":   { province: "British Columbia" },
 }, x => x.province === "Alberta"),undefined);
+
+assertEqual(findKey({}, x => x.province === "New Brunswick"),undefined);
