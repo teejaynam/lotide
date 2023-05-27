@@ -1,7 +1,15 @@
 // take two variables (primitive), and compare them for strict equality
-const assertEqual = function(actual, expected) {
+/*const assertEqual = function(actual, expected) {
   let outcome = actual === expected ? `🟢 Assertion Passed: ${actual} === ${expected}` : `🔴 Assertion Failed: ${actual} !== ${expected}`;
   console.log(outcome);
+};*/
+
+const assertEqual = (actual, expected) => {
+  if (actual === expected) {
+    console.log(`🟢 Assertion Passed: ${actual} === ${expected}`);
+  } else {
+    console.log(`🔴 Assertion Failed: ${actual} !== ${expected}`);
+  }
 };
 
 // testing
