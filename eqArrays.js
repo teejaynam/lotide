@@ -1,9 +1,6 @@
-const assertEqual = function(actual, expected) {
-  let outcome = actual === expected ? `🟢 Assertion Passed: ${actual} === ${expected}` : `🔴 Assertion Failed: ${actual} !== ${expected}`;
-  console.log(outcome);
-};
-
+// eqArrays.js
 // function that compares two arrays for strict equality, if there is at least one inequal element, it will return false
+
 const eqArrays = function(actual, expected) {
   if (Array.isArray(actual) && Array.isArray(expected)) {
     if (actual.length !== expected.length) {
@@ -22,22 +19,6 @@ const eqArrays = function(actual, expected) {
   return false;
 };
 
+// export function
 
-// testing
-
-if (eqArrays([1, 2, 3], [1, 2, 3])) {
-  console.log("true");
-} else {
-  console.log("false");
-} // => true
-
-if (eqArrays([1, 2, 3], [1, 2, "3"])) {
-  console.log("true");
-} else {
-  console.log("false");
-} // => false
-
-
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
-assertEqual(eqArrays(['medium', 'L'], ['medium', 'L']), true); // => should PASS
-
+module.exports = eqArrays;
