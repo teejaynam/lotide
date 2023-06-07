@@ -38,10 +38,10 @@ assertArraysEqual(map(words, word => word[0]),['g','c','t','m','t']);
 const test1 = ["Friends", "U & ME", "Nee where"];
 assertArraysEqual(map(test1, word => word[0]),["F","U","N"]);
 
-const test2 = [2,4,6,8,10];
-const resultsTest2 = map(test2, even => even % 2 === 0);
+const test2 = ["four","five"];
+const resultsTest2 = map(test2, element => element.length);
 
-assertArraysEqual(resultsTest2, [true,true,true,true,true]);
+assertArraysEqual(resultsTest2, [4,4]);
 
 
 const test3 = [1,2,3,4,5,6,7,8,9,10];
