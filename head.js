@@ -1,15 +1,11 @@
-const assertEqual = function(actual, expected) {
-  let outcome = actual === expected ? `🟢 Assertion Passed: ${actual} === ${expected}` : `🔴 Assertion Failed: ${actual} !== ${expected}`;
-  console.log(outcome);
-};
-
-// function for getting the first element of a given array
-const head = function(array) {
+const head = function(array) { //returns first element of the array
   return array[0];
 };
+
+const assertEqual = require('./assertEqual')
 
 
 // testing
 assertEqual(head([7,8,7]), 7);
 assertEqual(head(["Hello", "World"]), "Hello");
-assertEqual(head(["Womp", "Lighthouse", "Labs"]), "Hello");
+assertEqual(head(["Womp", "Lighthouse", "Labs"]), "Womp");
