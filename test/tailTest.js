@@ -1,6 +1,6 @@
 // test/tailTest.js
 
-const tail = require('../tail')
+const tail = require('../tail');
 const assert = require('chai').assert;
 
 // TEST CODE
