@@ -1,13 +1,25 @@
 // test/middleTest.js
 
 const middle = require('../middle');
-const assertArraysEqual = require('../assertArraysEqual');
+const assert = require('chai').assert;
 
 // TEST CODE
 
-console.log("an array with only 1 or 2 elements, return an empty array");
-assertArraysEqual(middle([1,2]),[]);
-console.log("an array with an odd amount of elements, return array of single middle element");
-assertArraysEqual(middle([1,2,3,4,5]),[3]);
-console.log("an array with even amount of elements, return array of middle two elements");
-assertArraysEqual(middle([1,2,3,4,5,6]),[3,4]);
+describe("#middle", () => {
+
+  const test1 = [1,2];
+  it("returns [] for [1,2]", () => {
+    assert.deepEqual(middle(test1), []);
+  });
+
+  const test2 = [1,2,3,4,5];
+  it("returns [3] for [1,2,3,4,5]", () => {
+    assert.deepEqual(middle(test2), [3]);
+  });
+
+  const test3 = [1,2,3,4,5,6];
+  it("returns [3,4] for [1,2,3,4,5,6]", () => {
+    assert.deepEqual(middle(test3), [3,4]);
+  });
+
+});
