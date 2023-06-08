@@ -1,18 +1,25 @@
 // test/tailTest.js
 
-const assertEqual = require('../assertEqual')
 const tail = require('../tail')
+const assert = require('chai').assert;
 
 // TEST CODE
-const test1 = ["Yo Yo", "Lighthouse", "Labs"];
-console.log("test that tail does not modify original array after passing to tail() :",tail(test1));
-console.log("original array length (3) should pass assertEqual")
-assertEqual(test1.length, 3);
 
-const test2 = tail(tail(test1));
-console.log("tail(tail(test1)) saved into new variable, modified array length comparison should pass assertEqual");
-assertEqual(test2.length,1);
+describe("#tail", () => {
 
-const test3 = tail(test1);
-console.log("modified array saved into new variable, modified array length comparison should pass assertEqual");
-assertEqual(test3.length, 2);
+  const test1 = ["Yo Yo", "Lighthouse", "Labs"];
+  it("returns ['Lighthouse', 'Labs'] for ['Yo Yo', 'Lighthouse', 'Labs']", () => {
+    assert.deepEqual(tail(test1), ["Lighthouse", "Labs"]);
+  });
+
+  const test2 = tail(test1);
+  it("returns ['Labs'] for tail(['Yo Yo', 'Lighthouse', 'Labs'])", () => {
+    assert.deepEqual(tail(test2), ['Labs']);
+  });
+
+  const test3 = ["Zoop", "Loop", "Shoop"];
+  it("returns ['Loop', 'Shoop'] for ['Zoop', 'Loop', 'Shoop']", () => {
+    assert.deepEqual(tail(test3), ["Loop","Shoop"]);
+  });
+
+});
