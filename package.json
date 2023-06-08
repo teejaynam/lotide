@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@tjnam/lotide",
   "version": "1.0.0",
-  "description": "",
+  "description": "Lighthouse Lab first project : mini clone of Lodash library",
   "main": "index.js",
   "directories": {
     "test": "test"
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/teejaynam/lotide.git"
   },
-  "author": "Taek Joon (TJ) Nam",
+  "author": "Taek Joon (TJ) Nam (github.com/teejaynam)",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/teejaynam/lotide/issues"
