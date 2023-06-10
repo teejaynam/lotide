@@ -1,4 +1,4 @@
-// test/flattenTest.js
+// test/countOnlyTest.js
 
 const countOnly = require('../countOnly');
 const assert = require('chai').assert;
