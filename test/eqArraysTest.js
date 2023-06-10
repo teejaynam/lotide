@@ -1,18 +1,26 @@
 // test/eqArraysTest.js
 
-const assertEqual = require('../assertEqual');
+const assert = require('chai').assert;
 const eqArrays = require('../eqArrays');
 
 // TEST CODE
 
-console.log("Comparison of two alike arrays of numbers should pass assertEquals");
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);
+describe("#eqArrays", () => {
 
-console.log("Comparison of two alike arrays of strings should pass assertEquals");
-assertEqual(eqArrays(['medium', 'L'], ['medium', 'L']), true);
+  it("returns true for two alike arrays with numbers", () => {
+    assert.deepEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);
+  });
 
-console.log("Comparison of two unlike arrays should return false, and pass assertEquals with second comparator as false");
-assertEqual(eqArrays([4,5,6], ["4",5,6]), false);
+  it("returns true for two alike arrays with strings", () => {
+    assert.deepEqual(eqArrays(['medium', 'L'], ['medium', 'L']), true);
+  });
 
-console.log("Comparison of two alike arrays of with nested arrays should pass assertEquals");
-assertEqual(eqArrays(['small', 'medium', [1,2]], ['small', 'medium', [1,2]]), true);
+  it("returns true for two alike arrays with a nested array", () => {
+    assert.deepEqual(eqArrays(['small', 'medium', [1,2]], ['small', 'medium', [1,2]]), true);
+  });
+
+  it("returns false for two arrays with that have different value elements", () => {
+    assert.deepEqual(eqArrays([4,5,6], ["4",5,6]), false);
+  });
+
+});
