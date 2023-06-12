@@ -12,6 +12,7 @@ This project was created and published by me as part of my learnings at Lighthou
 
 **Install it:**
 
+`npm init` - in a directory
 `npm install @tjnam/lotide`
 
 **Require it:**
