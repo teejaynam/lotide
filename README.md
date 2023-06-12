@@ -43,3 +43,13 @@ The following functions are currently implemented:
 * `eqObjects(...)`: A recursive function that checks the deep equality between two objects and returns true if equal or false if not.
 
 * `eqArrays(...)`: A recursive function that checks the deep equality between two arrays and returns true if equal or false if not.
+
+* `without(...)`: A function that receives an array and a value that returns a new array without the passed value.
+
+* `takeUntil(...)`: A function that receives an array and a callback function that returns a new sliced array with elements taken from the beginning that are processed through the callback until it returns a truthy value.
+
+* `map(...)`: A function that receives an array and a callback function that returns a new array from calling the callback function for every element in the passed array.
+
+* `findKey(...)`: A function that receives an object and a callback function which will invoke the callback function on each key-values in the object and returns the first value that satisfies the callback.
+
+* `countLetters(...)`: A function that takes a string and returns an object of the unique chars from the passed string with the number of occurences.
