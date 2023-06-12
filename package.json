@@ -1,6 +1,6 @@
 {
   "name": "@tjnam/lotide",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Lighthouse Lab first project : mini clone of Lodash library",
   "main": "index.js",
   "directories": {
